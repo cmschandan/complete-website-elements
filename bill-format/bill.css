@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    background: #ccc;
+    font-family: 'Poppins', sans-serif;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10mm auto;
+    /* border: 1px #D3D3D3 solid; */
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* typography */
+p {
+    font-size: .9rem;
+}
+
+header,
+main,
+footer {
+    overflow: hidden;
+}
+
+.header {
+    background-color: #fff;
+    /* margin: 10px 100px 0 100px; */
+    display: flex;
+    padding: 20px;
+}
+
+.header .logo {
+    font-size: 18px;
+    font-weight: 800;
+    position: relative;
+}
+
+.header .right {
+    position: absolute;
+    float: right;
+    right: 310px;
+}
+
+.header .right .b1 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header .right .b1 i {
+    padding-right: 5px;
+    color: #ff0923;
+}
+
+.header .right .b2 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.address {
+    display: flex;
+    background-color: #f0f3f4;
+}
+
+.address {
+    padding: 20px;
+}
+
+.address .comp1 {
+    padding: 10px;
+    width: 30%;
+}
+
+.address .comp2 {
+    padding: 10px;
+    width: 30%;
+}
+
+.address .invoice {
+    position: relative;
+    padding: 10px;
+    width: 40%;
+    left: 10px;
+    text-align: right;
+}
+
+/* table */
+.bill-table {
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.gap {
+    padding: 10px;
+}
+
+.table {
+    width: 96%;
+    border-collapse: collapse;
+    padding-top: 30px;
+    margin: 0 20px;
+}
+
+thead {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+thead tr td {
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid #ccc;
+    padding: 10px;
+}
+
+thead tr td:nth-child(1) {
+    width: 700px;
+}
+
+tbody tr td {
+    height: 50px;
+}
+
+.thead {
+    border-bottom: 2px solid #ccc;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+tbody tr td {
+    padding: 10px 0;
+}
+
+tbody tr td input {
+    border-bottom: 1px solid red;
+    padding: 10px;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    position: relative;
+}
+
+tbody tr td:nth-child(1) input {
+    width: 50%;
+}
+
+.inr-sign {
+    content: '\20B9';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+tbody tr td input {
+    text-align: center;
+}
+
+.total-section {
+    background-color: #f0f3f4;
+
+}
+
+.total-section td {
+    padding: 20px;
+}
+
+label {
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.total-section span {
+    font-size: 24px;
+}
+
+ul.list-item {
+    padding: 20px 0 20px 0;
+    margin: 10px;
+}
+
+.list-item li {
+    list-style: square;
+}
+
+footer {
+    margin: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+/* printable css */
+
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+    }
+
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+
+    .header .right {
+        display: none;
+    }
+
+    .address {
+        background-color: #f0f3f4;
+    }
+
+    tbody tr td input {
+        border-bottom: none;
+    }
+}
